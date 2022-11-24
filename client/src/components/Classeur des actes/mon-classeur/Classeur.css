@@ -1,0 +1,56 @@
+.contenaire_classeur{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.head_clsseur{
+    height: 30%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+
+}
+.text_classeur{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: #3F88C5;
+}
+.menu_classeur{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 40px;
+}
+
+.border1{
+    border-radius: 20px;
+}
+
+.col{
+    color: #6D6875;
+    
+}
+.col-deces{
+    color: #6D6875;
+}
+
+.accordion_classeur{
+    height: 60%;
+    width: 95%;
+}
+.fs-classeur{
+    font-size: 80px;
+}

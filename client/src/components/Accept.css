@@ -1,0 +1,65 @@
+.Accept {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #6D6875;
+  }
+.contenu_Accept{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 70%;
+    width: 100%;
+}
+.Accept_haut{
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.img_accept{
+    height: 80%;
+}
+.Accept_bas{
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.sect_Accept{
+    color: white;
+    text-align: center;
+    height: 50%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.sect_Accept_bas{
+    color: white;
+    height: 50%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transform: translateY(30px);
+}
+.link_Accept{
+    color: white;
+    text-decoration: none;
+} 
+.fa-solid:hover{
+    transform: translateX(30px);
+}
+.bg-danger1{
+    background-color: #F61322;
+}

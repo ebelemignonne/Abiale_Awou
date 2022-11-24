@@ -1,0 +1,30 @@
+.Inscription{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+form{
+    width: 300px;
+    align-items: center;
+}
+
+.bg{
+    background-color: #E0ECF5;
+    border-radius: 50px;
+}
+
+.logo_inscription{
+    height: 150px;
+}
+.text_inscription{
+    color: #3F88C5
+}
+
+.d-grid{
+    text-decoration: none;
+}
+
+

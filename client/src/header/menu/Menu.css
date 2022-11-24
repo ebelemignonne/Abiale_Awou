@@ -1,0 +1,46 @@
+.conteneur_menu{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #E0ECF5;
+    
+}
+
+.proprietes{
+    height: 100%;
+    width: 70%;
+    background-color: #6D6875;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.propriete{
+    height: 50%;
+    width: 70%;
+    margin-top: 120px;
+}
+.link-menu{
+    color: white;
+    text-decoration: none;
+}
+.icon-menu{
+    color: #6D6875;
+    font-size: 40px;
+    margin-right: 15px;
+    margin-top: 30px;
+}
+.mon_style{
+    border: 5px solid black;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.dropdown-menu{
+    background-color: #E0ECF5;
+    border: 2px solid #6D6875;
+}

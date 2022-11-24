@@ -1,0 +1,61 @@
+.contenaire_deces{
+    height: 100vh;
+    width: 100vw;
+}
+.header_deces{
+    height: 50%;
+    width: 100%;
+}
+.image_deces{
+    height: 61%;
+    width: 100%;
+    background-color: #1D3331;
+}
+.titre_deces{
+    height: 15%;
+    width: 100%;
+    background-color: #6D6875;
+}
+.head_deces{
+    height: 25%;
+    width: 100%;
+    background-color: #6D6875; 
+}
+.taxt_deces{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Rubik;
+    font-weight: 700;
+}
+.contenu_deces{
+    height: 50%;
+    width: 100%;
+    background-image: url("../../images/img_deces1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* .deces_img{
+    display: flex;
+    justify-content: center;
+
+} */
+
+/* .form_deces{
+    height: auto;
+    width: 96%;
+}
+.icon_ville{
+    transform: translateX(182px);
+} */
+
+
+
+
+
+
+
+
+

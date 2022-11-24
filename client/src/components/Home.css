@@ -1,0 +1,20 @@
+.home {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #6D6875;
+  }
+
+.logo_home{
+    height: 50%;
+}
+.link_home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10px;
+    border-radius: 50%;
+}
+
