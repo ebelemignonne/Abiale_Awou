@@ -39,7 +39,7 @@ db.connect(function (err) {
 // ! Use of Multer
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-      cb(null, './')     // './public/images/' directory name where save the file
+      cb(null, './images/')     // './public/images/' directory name where save the file
   },
   filename: function(req, file, cb){
       const ext = file.mimetype.split("/")[1];
@@ -57,6 +57,41 @@ app.use(cors({
     methods: ["GET", "POST"],
     credentials: true,
 }));
+
+app.post("/api/image", upload.single('image'),(req, res, err) => {
+
+  if (!req.file.originalname.match(/\.(jpg|JPG|jpeg|JPEG|png|PNG|gif|GIF)$/)) {
+
+    res.send({ msg:'Only image files (jpg, jpeg, png) are allowed!'})};
+
+    const image = req.file.filename;
+    const id =1
+
+    const sqlInsert = "UPDATE images SET `image` = ? WHERE id = ?;"
+
+    connection.query(sqlInsert, [image, id] , (err, result) => {
+      if(err){
+        console.log(err)
+        res.send({
+          msg: err
+        })
+      }
+      if(result){
+
+        res.send({
+          data: result,
+          msg: 'Your image has been updated'
+        });
+      }
+    });
+  }
+);
+
+
+
+
+
+
 
 // @type   POST
 // route for post data
