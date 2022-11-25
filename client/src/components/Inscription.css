@@ -14,6 +14,7 @@ form{
 .bg{
     background-color: #E0ECF5;
     border-radius: 50px;
+    justify-content: s;
 }
 
 .logo_inscription{

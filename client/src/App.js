@@ -1,6 +1,10 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
+
+import ProductList from "./components3/ProductList";
+import AddProduct from "./components3/AddProduct";
+import EditProduct from "./components3/EditProduct";
 
 import Home from './components/Home';
 import Accept from './components/Accept';
@@ -20,6 +24,11 @@ import Declaration from './components/Naissance/Declaration_naissance/Declaratio
 import Reclamation from './components/Naissance/Reclamation_copie/Reclamation';
 import Modification from './components/Naissance/Modification_d\'acte/Modification';
 import Retranscription from './components/Naissance/Retranscription_d\'actes/Retranscription';
+import Dashboard from './components2/Dashboard';
+import Navbar from './components2/Navbar';
+
+
+
 
 function App() {
   return (
@@ -47,6 +56,16 @@ function App() {
             <Route path="/Reclamation" element={<Reclamation />} />
             <Route path="/Modification" element={<Modification />} />
             <Route path="/Retranscription" element={<Retranscription />} />
+
+            <Route path="/list" element={<ProductList/>}/>
+            <Route path="add" element={<AddProduct/>}/>
+            <Route path="edit/:id" element={<EditProduct/>}/>
+
+            <Route path="/Dashboard" element={<Dashboard />} />
+            <Route path="/Navbar" element={<Navbar />} />
+
+            
+
         </Routes>
       </div>
     </BrowserRouter>

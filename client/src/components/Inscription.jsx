@@ -1,58 +1,84 @@
-import React from "react";
-import "./Inscription.css"
-import { Link } from "react-router-dom";
-import { useForm } from "react-hook-form";
+import React, { useState } from 'react'
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import { Icon } from '@iconify/react';
 
 
-const Inscription = () =>{
-
-    const { register, handleSubmit } = useForm();
-    const onSubmit = data => console.log(data);
-
-return(
-    <div className="Inscription">
-            <div className="container">
 
 
-                <form onSubmit={handleSubmit(onSubmit)} post={"http://localhost:8000/createOneInscript"}  className="mx-auto" >
-                <div className="text_inscription">
-                    <h2>Inscription</h2>
+
+
+const Inscription = () => {
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [confPassword, setConfPassword] = useState('');
+    const [msg, setMsg] = useState('');
+    const history = useNavigate();
+ 
+    const Register = async (e) => {
+        e.preventDefault();
+        try {
+            await axios.post('http://localhost:5000/users', {
+                name: name,
+                email: email,
+                password: password,
+                confPassword: confPassword
+            });
+            history.push("/");
+        } catch (error) {
+            if (error.response) {
+                setMsg(error.response.data.msg);
+            }
+        }
+    }
+ 
+    return (
+        <section className="hero has-background-light d-flex flex-column is-fullheight is-fullwidth">
+            <div className="hero-body">
+                <div className="container">
+                    <h2 className='mb-5 text-info fs-2'>INSCRIPTION</h2>
+                    <div className="columns is-centered">
+                        <div className="column is-4-desktop">
+                            <form onSubmit={Register} className="box">
+                                <p className="has-text-centered">{msg}</p>
+                                <div className="field mt-5">
+                                    <label className="label">Nom</label>
+                                    <div className="">
+                                        <input type="text" className="input" placeholder="Name"
+                                            value={name} onChange={(e) => setName(e.target.value)} />
+                                    </div>
+                                </div>
+                                <div className="field mt-5">
+                                    <label className="label">Email</label>
+                                    <div className="">
+                                        <input type="text" className="input" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                                    </div>
+                                </div>
+                                <div className="field mt-5">
+                                    <label className="label">Mot de passe</label>
+                                    <div className="">
+                                        <input type="password" className="input" placeholder="******" value={password} onChange={(e) => setPassword(e.target.value)} />
+                                    </div>
+                                </div>
+                                <div className="field mt-5">
+                                    <label className="label">Confirm Mot de passe</label>
+                                    <div className="">
+                                        <input type="password" className="input" placeholder="******" value={confPassword} onChange={(e) => setConfPassword(e.target.value)} />
+                                    </div>
+                                </div>
+                                <div className="field mt-5">
+                                    <button className="button is-success is-fullwidth">Register <Icon icon="mdi:account-success" className='ms-2' color="white" height="40" /> </button>
+                                    <Link to="/Accueil" className=""><button type="submit" name="submit" value="Register" className="button is-primary is-fullwidth mt-1">Suivant <Icon height="40" className='ms-2' icon="ic:outline-arrow-right-alt" /></button></Link>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-                    <div>
-                        <label htmlFor=""></label>
-                        <input type="text" className="form-control bg" autoComplete="Nom" name="Nom" placeholder="Nom" {...register("Nom", { required: true, maxLength: 30 })} />
-                    </div>
-                    <div>
-                        <label htmlFor=""></label>
-                        <input type="text" className="form-control bg " autoComplete="lastName" name="Prenom" placeholder="Prenom" {...register("Prenom", { required: true, maxLength: 30 })} />
-                    </div>
-                    <div>
-                        <label htmlFor=""></label>
-                        <input type="number" className="form-control bg " autoComplete="Tel" name="Tel" placeholder="Tel" {...register("Tel", { required: true, maxLength: 30 })}/>
-                    </div>
-                    <div>
-                        <label htmlFor=""></label>
-                        <input type="email" className="form-control bg" autoComplete="email" name="Email" placeholder="Email" {...register("Email", { required: true, maxLength: 30 })}/>
-                    </div>
-                    <div>
-                        <label htmlFor=""></label>
-                        <input type="password" className="form-control bg " autoComplete="Password" name="Password" placeholder="Mot de passe" {...register("Password", { required: true, maxLength: 30 })} />
-                    </div>
-                         <div className="d-grid gap-2 col-10 mx-auto">
-                           <button className="d-grid gap-2 col-10 mx-auto btn badge rounded-pill bg-success bg-opacity-50 mt-4 d-flex align-items-center justify-content-center" type="submit">Envoyer<Icon icon="fluent-mdl2:accept-medium" /></button>
-                           <Link to="/Accueil" className="d-grid gap-2 col-10 mx-auto"><button type="submit" name="submit" value="Register" className="btn badge rounded-pill bg-primary ">Suivant <Icon icon="ic:outline-arrow-right-alt" /></button></Link>
-                         </div>
-
-
-                </form>
-
             </div>
-    </div>
-)
+        </section>
+    )
 }
-
-
-
-
+ 
 export default Inscription
