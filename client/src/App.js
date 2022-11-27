@@ -2,9 +2,9 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 
-import ProductList from "./components3/ProductList";
-import AddProduct from "./components3/AddProduct";
-import EditProduct from "./components3/EditProduct";
+import ProductList from "./components/Classeur des actes/mon-classeur/ProductList";
+import AddProduct from "./components/Classeur des actes/mon-classeur/AddProduct";
+import EditProduct from "./components/Classeur des actes/mon-classeur/EditProduct.js";
 
 import Home from './components/Home';
 import Accept from './components/Accept';
@@ -58,7 +58,7 @@ function App() {
             <Route path="/Retranscription" element={<Retranscription />} />
 
             <Route path="/list" element={<ProductList/>}/>
-            <Route path="add" element={<AddProduct/>}/>
+            <Route path="/ajout" element={<AddProduct/>}/>
             <Route path="edit/:id" element={<EditProduct/>}/>
 
             <Route path="/Dashboard" element={<Dashboard />} />

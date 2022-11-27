@@ -15,7 +15,7 @@ const EditProduct = () => {
 
   const getProductById = async () => {
     const response = await axios.get(`http://localhost:5000/products/${id}`);
-    setTitle(response.data.nom);
+    setTitle(response.data.name);
     setFile(response.data.image);
     setPreview(response.data.url);
   };
@@ -48,14 +48,14 @@ const EditProduct = () => {
       <div className="column is-half">
         <form onSubmit={updateProduct}>
           <div className="field">
-            <label className="label">Nom proprietair de l'acte</label>
+            <label className="label">Product Name</label>
             <div className="control">
               <input
                 type="text"
                 className="input"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
-                placeholder="Nom proprietair de l'acte"
+                placeholder="Product Name"
               />
             </div>
           </div>
@@ -71,7 +71,7 @@ const EditProduct = () => {
                     onChange={loadImage}
                   />
                   <span className="file-cta">
-                    <span className="file-label">Choisissez un...</span>
+                    <span className="file-label">Choose a file...</span>
                   </span>
                 </label>
               </div>
@@ -80,7 +80,7 @@ const EditProduct = () => {
 
           {preview ? (
             <figure className="image is-128x128">
-              <img src={preview} alt="Preview acte" />
+              <img src={preview} alt="Preview Image" />
             </figure>
           ) : (
             ""
@@ -89,7 +89,7 @@ const EditProduct = () => {
           <div className="field">
             <div className="control">
               <button type="submit" className="button is-success">
-                Metre a jours
+                Update
               </button>
             </div>
           </div>

@@ -3,8 +3,6 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 const ProductList = () => {
-
-
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -27,8 +25,8 @@ const ProductList = () => {
 
   return (
     <div className="container mt-5">
-      <Link to="/add" className="button is-success">
-        Ajoutez un acte
+      <Link to="/ajout" className="button is-success">
+        Add New
       </Link>
       <div className="columns is-multiline mt-2">
         {products.map((product) => (
@@ -36,13 +34,13 @@ const ProductList = () => {
             <div className="card">
               <div className="card-image">
                 <figure className="image is-4by3">
-                  <img src={product.url} alt="acte" />
+                  <img src={product.url} alt="Image" />
                 </figure>
               </div>
               <div className="card-content">
                 <div className="media">
                   <div className="media-content">
-                    <p className="title is-4">{product.nom}</p>
+                    <p className="title is-4">{product.name}</p>
                   </div>
                 </div>
               </div>
@@ -51,7 +49,7 @@ const ProductList = () => {
                 <Link to={`edit/${product.id}`} className="card-footer-item">
                   Edit
                 </Link>
-                <a href="/"
+                <a
                   onClick={() => deleteProduct(product.id)}
                   className="card-footer-item"
                 >

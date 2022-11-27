@@ -32,18 +32,18 @@ const AddProduct = () => {
   };
 
   return (
-    <div className="columns is-centered mt-5">
+    <div className="columns d-flex is-centered mt-5">
       <div className="column is-half">
         <form onSubmit={saveProduct}>
           <div className="field">
-            <label className="label">Nom du proprietaire</label>
+            <label className="label fs-4 text-center">Nom du proprietair de l'acte de naissance</label>
             <div className="control">
               <input
                 type="text"
                 className="input"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
-                placeholder="Nom du proprietaire"
+                placeholder="Product Name"
               />
             </div>
           </div>
@@ -59,7 +59,7 @@ const AddProduct = () => {
                     onChange={loadImage}
                   />
                   <span className="file-cta">
-                    <span className="file-label">Cherchez dans vos fichiers...</span>
+                    <span className="file-label">Allez dans vos fichiers</span>
                   </span>
                 </label>
               </div>
@@ -68,7 +68,7 @@ const AddProduct = () => {
 
           {preview ? (
             <figure className="image is-128x128">
-              <img src={preview} alt="Preview acte" />
+              <img src={preview} alt="Preview Image" />
             </figure>
           ) : (
             ""

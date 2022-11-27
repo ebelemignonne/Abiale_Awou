@@ -12,7 +12,7 @@ import axios from 'axios';
 
 
 const naissances = axios.create({
-	baseURL: 'http://localhost:3500/api/getAll/naissance',
+	baseURL:("http://localhost:5000/products"),
 
 });
 
@@ -31,19 +31,49 @@ const PhotosNaissance = () => {
 				console.log(error);
 			}
 		};
+
+
 		fetchPost();
 	}, []);
+
+
 
 	return (
 		<div className="naissance d-flex flex-column align-items-center justify-content-evenly ">
 			<div className=" form-control mt-2  d-flex flex-column align-items-center justify-content-center">
 				<h2 className='text-center form-control'>MES ACTES DE NAISSANCE ENREGISTERER</h2>
+        <Link to="/ajout" className="button is-success mb-2 mt-1">Ajouter</Link>
 				{posts.map((post) => {
 					return (
-						<div className="form-control post-card d-flex flex-column align-items-center" key={post.id}>
-							<h2 className="post-nom form-control">{post.nom}</h2>
-               <div className=''>{post.image}</div>
-						</div>
+
+            <div className="column mb-1 form-control bg-info " key={post.id}>
+            <div className="card">
+              <div className="card-image">
+                <figure className="image is-4by3">
+                  <img src={post.url} alt="Imag" />
+                </figure>
+              </div>
+              <div className="card-content">
+                <div className="media">
+                  <div className="media-content">
+                    <p className="title is-4">{post.name}</p>
+                  </div>
+                </div>
+              </div>
+
+              <footer className="card-footer">
+                <Link to={`edit${post.id}`} className="card-footer-item">
+                  Edit
+                </Link>
+                {/* <a
+                  onClick={() => deleteProduct(post.id)}
+                  className="card-footer-item"
+                >
+                  Delete
+                </a> */}
+              </footer>
+            </div>
+          </div>
 					);
 				})}
 			</div>
@@ -82,12 +112,6 @@ function AllCollapseExample() {
   }
   
 
-
-
-
-
-
-
 const Classeur =()=>{
     return(
         <div className="contenaire_classeur">
@@ -108,3 +132,29 @@ const Classeur =()=>{
 }
 
 export default Classeur
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
