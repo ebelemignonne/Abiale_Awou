@@ -19,8 +19,8 @@ function Entete (){
     <div className="entete">
                     <div className="bloc_naissance d-flex flex-column mx-auto">
                 <div className="bloc1 d-flex justify-content-between mt-4 fs-1">
-                    <Link to="/Accueil"><Icon icon="game-icons:return-arrow" color="#6d6875" width="40" height="40" /></Link>
-                    <Link to="/Menu"><Icon icon="material-symbols:menu-rounded" color="#6d6875" width="40" height="40" /></Link>
+                    <Link to="/Accueil"><Icon icon="game-icons:return-arrow" color="white" width="40" height="40" hFlip={true} vFlip={true} /></Link>
+                    <Link to="/Menu"><Icon icon="material-symbols:menu-rounded" color="white" width="40" height="40" /></Link>
                 </div>
                 <div className="bloc2 mt-2 d-flex flex-column justify-content-between  ">
                     <img className="img-mairie" src={Mairie} alt="mairie" />
@@ -34,12 +34,12 @@ function Entete (){
 
 function CommentCaMarche() {
     return (
-      <Accordion className="ca_marche">
+      <Accordion className="ca_marche mx-auto">
         <Accordion.Item eventKey="0">
           <Accordion.Header className="border border-4 fs">Que voulez vous faire? </Accordion.Header>
           <Accordion.Body>
           <h2>Choisissez l'une des options ci-dessous:</h2>
-          <Icon className="ms-5 deplacement-icon" icon="ph:arrow-fat-lines-down-fill" color="#6d6875" width="40" height="40" />
+          <Icon className="ms-4 deplacement-icon" icon="ph:arrow-fat-lines-down-fill" color="#311847" width="40" height="40" />
             <div class="d-grid gap-1 mt-2">
                 <Link to='/Declaration' class="d-grid gap-2">
                     <button class="btn bg_but_naissance btn-primary pt-3

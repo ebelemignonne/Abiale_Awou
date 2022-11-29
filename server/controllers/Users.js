@@ -15,7 +15,7 @@ export const getUsers = async(req, res) => {
  
 export const Register = async(req, res) => {
     const { name, email, password, confPassword } = req.body;
-    if(password !== confPassword) return res.status(400).json({msg: "Password and Confirm Password do not match"});
+    if(password !== confPassword) return res.status(400).json({msg: "Les mots de passe ne sont pas identique"});
     const salt = await bcrypt.genSalt();
     const hashPassword = await bcrypt.hash(password, salt);
     try {
@@ -24,7 +24,7 @@ export const Register = async(req, res) => {
             email: email,
             password: hashPassword
         });
-        res.json({msg: "Registration Successful"});
+        res.json({msg: "Enregistré avec succes!"});
     } catch (error) {
         console.log(error);
     }
@@ -38,7 +38,7 @@ export const Login = async(req, res) => {
             }
         });
         const match = await bcrypt.compare(req.body.password, user[0].password);
-        if(!match) return res.status(400).json({msg: "Wrong Password"});
+        if(!match) return res.status(400).json({msg: "Movais mot de passe"});
         const userId = user[0].id;
         const name = user[0].name;
         const email = user[0].email;
@@ -59,7 +59,7 @@ export const Login = async(req, res) => {
         });
         res.json({ accessToken });
     } catch (error) {
-        res.status(404).json({msg:"Email not found"});
+        res.status(404).json({msg:"Email non reconnu"});
     }
 }
  

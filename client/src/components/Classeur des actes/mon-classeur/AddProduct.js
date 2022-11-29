@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { Icon } from "@iconify/react";
 
 const AddProduct = () => {
   const [title, setTitle] = useState("");
@@ -32,7 +34,7 @@ const AddProduct = () => {
   };
 
   return (
-    <div className="columns d-flex is-centered mt-5">
+    <div className="columns form-control d-flex is-centered mt-5">
       <div className="column is-half">
         <form onSubmit={saveProduct}>
           <div className="field">
@@ -68,17 +70,18 @@ const AddProduct = () => {
 
           {preview ? (
             <figure className="image is-128x128">
-              <img src={preview} alt="Preview Image" />
+              <img src={preview} alt="Preview Imag" />
             </figure>
           ) : (
             ""
           )}
 
           <div className="field">
-            <div className="control">
+            <div className="control d-flex justify-content-between">
               <button type="submit" className="button is-success">
                 Enregistrer
               </button>
+              <Link to="/classeur" className="button is-info is-outlined">Retour<Icon className="ms-1" icon="game-icons:return-arrow" color="#311847" width="35" height="35" vFlip={true} /></Link>
             </div>
           </div>
         </form>

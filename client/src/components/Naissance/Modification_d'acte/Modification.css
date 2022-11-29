@@ -7,7 +7,7 @@
 .head_modification{
     height: 10%;
     width: 100%;
-    background-color: #6D6875;
+    background-color: #311847;
     align-items: center;
     padding: 0px 25px;
 }
@@ -28,7 +28,7 @@
 .inf_modification{
     height: 20%;
     width: 100%;
-    background-image: url('../../../images/erreur.jpeg');
+    background-image: url('../../../images/erreur.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     align-items: flex-end;
@@ -38,12 +38,12 @@
     height: 65%;
     width: 100%;
     justify-content: center;
-    background-color: #FDE0D0;
+    background-color: #311847;
 }
 .mon_bb{
     width: 100%;
     height: 5%;
-    background-color: #6D6875;
+    background-color: #311847;
 }
 .Form_modification{
     width: 92%;

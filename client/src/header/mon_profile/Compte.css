@@ -19,7 +19,7 @@
     color: white;
 }
 .icon-compte{
-    color: #6D6875;
+    color: #311847;
     font-size: 40px;
     transform: translateX(320px);
 }
@@ -27,7 +27,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: #6D6875;
+    background-color: #311847;
     color: white;
     height: 50%;
     width: 100%;
@@ -38,7 +38,7 @@
 .param_compte{
     height: 70%;
     width: 70%;
-    background-color: #6D6875;
+    background-color: #311847;
 }
 
 .btn-warning{

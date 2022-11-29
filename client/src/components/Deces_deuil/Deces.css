@@ -9,17 +9,17 @@
 .image_deces{
     height: 61%;
     width: 100%;
-    background-color: #1D3331;
+    background-color: #311847;
 }
 .titre_deces{
     height: 15%;
     width: 100%;
-    background-color: #6D6875;
+    background-color: #311847;
 }
 .head_deces{
     height: 25%;
     width: 100%;
-    background-color: #6D6875; 
+    background-color: #311847; 
 }
 .taxt_deces{
     margin: 0;
@@ -31,25 +31,13 @@
 .contenu_deces{
     height: 50%;
     width: 100%;
-    background-image: url("../../images/img_deces1.jpg");
+    background-color: #311847;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 
-/* .deces_img{
-    display: flex;
-    justify-content: center;
 
-} */
-
-/* .form_deces{
-    height: auto;
-    width: 96%;
-}
-.icon_ville{
-    transform: translateX(182px);
-} */
 
 
 

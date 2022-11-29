@@ -8,14 +8,10 @@ const Menu =()=>{
         <div className="conteneur_menu">
             <div className="proprietes ">
             <div className="btn-group-vertical propriete" role="group" aria-label="Vertical button group">
-                {/* mb-1 */}
-            <button type="button" className="btn btn-primary p-but "><Link className="link-menu" to="/Accueil">Accueil</Link></button>
-               {/* mb-1 */}
-            <button type="button" className="btn btn-primary "><Link className="link-menu" to="/Naissance">Naissance</Link></button>
+            <button type="button" className="btn btn-primary p-but mb-1 "><Link className="link-menu" to="/Accueil">Accueil</Link></button>
+            <button type="button" className="btn btn-primary mb-1"><Link className="link-menu" to="/Naissance">Naissance</Link></button>
             <div className="btn-group" role="group">
-                {/* mb-1 */}
-
-                <button type="button" className="btn btn-primary dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+                <button type="button" className="btn btn-primary mb-1 dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
                 Options
                 </button>
                 <ul className="dropdown-menu">
@@ -25,13 +21,11 @@ const Menu =()=>{
                     <li><Link to="/Retranscription" className="dropdown-item" >Retranscription acte de naissance</Link></li>
                 </ul>
             </div>
-                {/* mb-1 */}
-            <button type="button" className="btn btn-primary "><Link to="/Deces" className="link-menu">Deces</Link></button>
-                {/* mb-1 */}
-            <button type="button" className="btn btn-primary "> <Link to="/Classeur" className="link-menu">Classeur</Link></button>
+            <button type="button" className="btn mb-1 btn-primary "><Link to="/Deces" className="link-menu">Deces</Link></button>
+            <button type="button" className="btn btn-primary "> <Link to="/Classeur" className="link-menu ">Classeur</Link></button>
             </div>
             </div>
-            <Link to="/Accueil"><Icon className="icon-menu " icon="game-icons:return-arrow" /></Link>
+            <Link to="/Accueil"><Icon className="mt-5 me-3" icon="game-icons:return-arrow" color="white" width="40" height="40" hFlip={true} vFlip={true} /></Link>
         </div>
     )
 }

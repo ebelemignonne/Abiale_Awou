@@ -3,7 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Link } from 'react-router-dom';
 import { Icon } from '@iconify/react';
-
+import "./Inscription.css";
 
 
 
@@ -35,42 +35,42 @@ const Inscription = () => {
     }
  
     return (
-        <section className="hero has-background-light d-flex flex-column is-fullheight is-fullwidth">
+        <section className="hero fond  d-flex flex-column is-fullheight is-fullwidth">
             <div className="hero-body">
                 <div className="container">
                     <h2 className='mb-5 text-info fs-2'>INSCRIPTION</h2>
                     <div className="columns is-centered">
                         <div className="column is-4-desktop">
-                            <form onSubmit={Register} className="box">
+                            <form onSubmit={Register} className="moi text-white">
                                 <p className="has-text-centered">{msg}</p>
                                 <div className="field mt-5">
-                                    <label className="label">Nom</label>
+                                    <label className="label text-white">Nom</label>
                                     <div className="">
-                                        <input type="text" className="input" placeholder="Name"
+                                        <input type="text" className="input is-rounded" placeholder="Name"
                                             value={name} onChange={(e) => setName(e.target.value)} />
                                     </div>
                                 </div>
                                 <div className="field mt-5">
-                                    <label className="label">Email</label>
+                                    <label className="label text-white">Email</label>
                                     <div className="">
-                                        <input type="text" className="input" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                                        <input type="text" className="input is-rounded" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
                                     </div>
                                 </div>
                                 <div className="field mt-5">
-                                    <label className="label">Mot de passe</label>
+                                    <label className="label text-white">Mot de passe</label>
                                     <div className="">
-                                        <input type="password" className="input" placeholder="******" value={password} onChange={(e) => setPassword(e.target.value)} />
+                                        <input type="password" className="input is-rounded" placeholder="******" value={password} onChange={(e) => setPassword(e.target.value)} />
                                     </div>
                                 </div>
                                 <div className="field mt-5">
-                                    <label className="label">Confirm Mot de passe</label>
+                                    <label className="label text-white">Confirm Mot de passe</label>
                                     <div className="">
-                                        <input type="password" className="input" placeholder="******" value={confPassword} onChange={(e) => setConfPassword(e.target.value)} />
+                                        <input type="password" className="input is-rounded" placeholder="******" value={confPassword} onChange={(e) => setConfPassword(e.target.value)} />
                                     </div>
                                 </div>
                                 <div className="field mt-5">
-                                    <button className="button is-success is-fullwidth">Register <Icon icon="mdi:account-success" className='ms-2' color="white" height="40" /> </button>
-                                    <Link to="/Accueil" className=""><button type="submit" name="submit" value="Register" className="button is-primary is-fullwidth mt-1">Suivant <Icon height="40" className='ms-2' icon="ic:outline-arrow-right-alt" /></button></Link>
+                                    <button className="button text-white is-rounded bg-success is-fullwidth">Register <Icon icon="mdi:account-success" className='ms-2' color="white" height="40" /> </button>
+                                    <Link to="/Accueil" className=""><button type="submit" name="submit" value="Register" className="button bg-primary text-white is-rounded is-fullwidth mt-1">Suivant <Icon height="40" className='ms-2' icon="ic:outline-arrow-right-alt" /></button></Link>
                                 </div>
                             </form>
                         </div>

@@ -10,8 +10,14 @@
 .logo_connexion{
     height: 150px;
 }
-
-.text .connexion{
-    height: 30px;
-    color: #6D6875;
+.moi,
+.fond{
+    background-color: #311847;
 }
+
+
+
+/* .text .connexion{
+    height: 30px;
+    color: #311847;
+} */

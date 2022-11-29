@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import "./Classeur.css";
 import { Icon } from '@iconify/react';
 import Accordion from 'react-bootstrap/Accordion';
-// import bebe from '../../../images/bebe.png';
 import { Link } from "react-router-dom";
 import axios from 'axios';
 
@@ -40,8 +39,8 @@ const PhotosNaissance = () => {
 
 	return (
 		<div className="naissance d-flex flex-column align-items-center justify-content-evenly ">
-			<div className=" form-control mt-2  d-flex flex-column align-items-center justify-content-center">
-				<h2 className='text-center form-control'>MES ACTES DE NAISSANCE ENREGISTERER</h2>
+			<div className=" form-control mt-2 d-flex flex-column align-items-center justify-content-center">
+				<h2 className='text-center bg-info text-white form-control'>MES ACTES DE NAISSANCE ENREGISTERÉ</h2>
         <Link to="/ajout" className="button is-success mb-2 mt-1">Ajouter</Link>
 				{posts.map((post) => {
 					return (
@@ -62,15 +61,9 @@ const PhotosNaissance = () => {
               </div>
 
               <footer className="card-footer">
-                <Link to={`edit${post.id}`} className="card-footer-item">
-                  Edit
+                <Link to={`edit${post.id}`} className="card-footer-item text-decoration-none">
+                  Voir
                 </Link>
-                {/* <a
-                  onClick={() => deleteProduct(post.id)}
-                  className="card-footer-item"
-                >
-                  Delete
-                </a> */}
               </footer>
             </div>
           </div>
@@ -114,19 +107,19 @@ function AllCollapseExample() {
 
 const Classeur =()=>{
     return(
-        <div className="contenaire_classeur">
-            <div className="head_clsseur">
-                <div className="menu_classeur">
-                <Link to="/Menu"><Icon className="ms-4" icon="material-symbols:menu-rounded" /></Link>
-                <Link to="/Accueil"><Icon className="me-4" icon="game-icons:return-arrow" /></Link>
+        <div className="contenaire_classeur ">
+            <div className="head_clsseur ">
+                <div className="menu_classeur ">
+                <Link to="/Menu"><Icon className="ms-4" color="white" icon="material-symbols:menu-rounded" /></Link>
+                <Link to="/Accueil"><Icon className="me-4" icon="game-icons:return-arrow" color="white" width="40" height="40" hFlip={true} vFlip={true} /></Link>
                 </div>
                 <div className="text_classeur">
-                    <h2 className="fs-2 ms-4">Mon classeur de <br /> document</h2>
-                    <Icon className="fs-classeur me-4" icon="wpf:books" />
+                    <h2 className="fs-2 text-white ms-4">Mon classeur de <br /> document</h2>
+                    <Icon className="fs-classeur text-white me-4" icon="wpf:books" />
                 </div>
 
             </div>
-            <AllCollapseExample />
+            <AllCollapseExample/>
         </div>
     )
 }

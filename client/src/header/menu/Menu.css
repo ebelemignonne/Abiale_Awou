@@ -4,14 +4,13 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: #E0ECF5;
-    
+    background-color: #0091AD;
 }
 
 .proprietes{
     height: 100%;
     width: 70%;
-    background-color: #6D6875;
+    background-color: #311847;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,12 +21,14 @@
     width: 70%;
     margin-top: 120px;
 }
+
 .link-menu{
     color: white;
     text-decoration: none;
 }
+
 .icon-menu{
-    color: #6D6875;
+    color: #311847;
     font-size: 40px;
     margin-right: 15px;
     margin-top: 30px;
@@ -42,5 +43,5 @@
 
 .dropdown-menu{
     background-color: #E0ECF5;
-    border: 2px solid #6D6875;
+    border: 2px solid #311847;
 }

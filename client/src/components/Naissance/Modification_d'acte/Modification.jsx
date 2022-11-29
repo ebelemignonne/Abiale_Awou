@@ -17,7 +17,7 @@ function Modification (){
         <div className="contenaire_modification">
             <div className="head_modification d-flex  justify-content-between">
                 <Link to="/Menu"><Icon icon="material-symbols:menu-rounded" color="white" width="40" height="40" /></Link>
-                <Link to="/Naissance"><Icon icon="game-icons:return-arrow" color="white" width="40" height="40" /></Link>
+                <Link to="/Naissance"><Icon icon="game-icons:return-arrow" color="white" width="40" height="40" hFlip={true} vFlip={true} /></Link>
             </div>
             <div className="inf_modification flex-column d-flex ">
                 <Information />
@@ -72,25 +72,25 @@ function Formulairs() {
         <Form className="form_modification_group flex-column d-flex">
       <Accordion className="Form_modification mt-2" defaultActiveKey="">
         <Accordion.Item className="border border-5 mb-1" eventKey="0">
-          <Accordion.Header >Ville et arrondissement <Icon className="fs-4 col ms-1" icon="mdi:town-hall" color="#6d6875" width="40" height="40" /></Accordion.Header>
+          <Accordion.Header >Ville et arrondissement <Icon className="fs-4 col ms-1" icon="mdi:town-hall" color="#311847" width="40" height="40" /></Accordion.Header>
           <Accordion.Body >
           <Ville />
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item className="border border-5 mb-1" eventKey="1">
-          <Accordion.Header>Informations de L'enfant <Icon className="fs-4 col me-1" icon="ph:baby-fill" color="#6d6875" width="40" height="40" /></Accordion.Header>
+          <Accordion.Header>Informations de L'enfant <Icon className="fs-4 col me-1" icon="ph:baby-fill" color="#311847" width="40" height="40" /></Accordion.Header>
           <Accordion.Body>
           <Formulair />
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item className="border border-5" eventKey="2">
-          <Accordion.Header>Informations du pere <Icon className="fs-4 col ms-4" icon="mdi:father" color="#6d6875" width="40" height="40" /></Accordion.Header>
+          <Accordion.Header>Informations du pere <Icon className="fs-4 col ms-4" icon="mdi:father" color="#311847" width="40" height="40" /></Accordion.Header>
           <Accordion.Body>
             <Pere />
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item className="border border-5" eventKey="3">
-          <Accordion.Header>Informations de la mere <Icon className="fs-4 col ms-2" icon="mdi:mom" color="#6d6875" width="40" height="40" /></Accordion.Header>
+          <Accordion.Header>Informations de la mere <Icon className="fs-4 col ms-2" icon="mdi:mom" color="#311847" width="40" height="40" /></Accordion.Header>
           <Accordion.Body>
             <Mere />
           </Accordion.Body>

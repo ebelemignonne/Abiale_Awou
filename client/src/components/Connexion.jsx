@@ -3,13 +3,14 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { Icon } from '@iconify/react';
-
+import "./Connexion.css"
  
 const Connexion = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [msg, setMsg] = useState('');
     const history = useNavigate();
+
  
     const Auth = async (e) => {
         e.preventDefault();
@@ -26,29 +27,29 @@ const Connexion = () => {
         }
     }
     return (
-        <section className="hero has-background-light is-fullheight is-fullwidth">
-            <div className="hero-body">
-                <div className="container">
+        <section className="hero fond is-fullheight is-fullwidth">
+            <div className="hero-body ">
+                <div className="container ">
                     <h2 className='mb-5 text-info fs-2'>CONNEXION</h2>
-                    <div className="columns is-centered">
-                        <div className="column is-4-desktop">
-                            <form onSubmit={Auth} className="box">
+                    <div className="columns  is-centered">
+                        <div className="column is-4-desktop ">
+                            <form onSubmit={Auth} className="moi">
                                 <p className="has-text-centered">{msg}</p>
-                                <div className="field mt-5">
-                                    <label className="label">Email uniquement.</label>
-                                    <div className="">
-                                        <input type="text" className="input" placeholder="Username" value={email} onChange={(e) => setEmail(e.target.value)} />
+                                <div className="field  mt-5">
+                                    <label className="label  text-white">Email uniquement.</label>
+                                    <div className=" ">
+                                        <input type="text" className="input is-rounded " placeholder="" value={email} onChange={(e) => setEmail(e.target.value)} />
                                     </div>
                                 </div>
                                 <div className="field mt-5">
-                                    <label className="label">Password</label>
+                                    <label className="label text-white">Password</label>
                                     <div className="">
-                                        <input type="password" className="input" placeholder="******" value={password} onChange={(e) => setPassword(e.target.value)} />
+                                        <input type="password" className="input is-rounded" placeholder="******" value={password} onChange={(e) => setPassword(e.target.value)} />
                                     </div>
                                 </div>
                                 <div className="field mt-5">
-                                    <button className="button is-success is-fullwidth">Connexion <Icon className='ms-2' icon="carbon:vpn-connection" color="white" width="30" height="30" /></button>
-                                    <Link to="/Accueil" className=""><button type="submit" name="submit" value="Register" className="button is-primary is-fullwidth mt-1">Suivant <Icon height="40" className='ms-2' icon="ic:outline-arrow-right-alt" /></button></Link>
+                                    <button className="button bg-success opacity-75 text-white is-rounded is-fullwidth">Connexion <Icon className='ms-2' icon="carbon:vpn-connection" color="white" width="30" height="30" /></button>
+                                    <Link to="/Accueil" className=""><button type="submit" name="submit" value="Register" className="button is-rounded text-white  bg-primary is-fullwidth mt-1">Suivant <Icon height="40" className='ms-2' icon="ic:outline-arrow-right-alt" /></button></Link>
 
                                 </div>
                             </form>

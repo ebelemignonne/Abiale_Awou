@@ -1,40 +1,42 @@
 import React from "react";
 import "./Accueil.css"
 import { Icon } from '@iconify/react';
-import img_Accueil from "../images/img_Accueil.png"
+import maman1 from "../images/maman1.png"
 import { Link } from "react-router-dom";
 
 const Accueil =()=>{
     return(
-        <div className="Accueil">
+        <div className="Accueil placeholder-glow ">
             <div className="header_accueil">
                 <head>
-                    <Link to="/Compte"><Icon className="icon_head cursor" icon="carbon:user-avatar-filled-alt" /></Link>
-                    <Link to="/Menu"><Icon className="icon_head cursor" icon="material-symbols:menu-rounded" /></Link>
+                    <Link to="/Compte"><Icon className="icon_head  cursor" icon="carbon:user-avatar-filled-alt" color="white" /></Link>
+                    <Link to="/Menu"><Icon className="icon_head cursor" icon="material-symbols:menu-rounded" color="white" /></Link>
                 </head>
-                <img className="cursor" src={img_Accueil} alt="img accueil" />
+                <img className="cursor" src={maman1} alt="img accueil" />
                 {/* mb-3 */}
-                    <Icon className="icon_head cursor" icon="ic:baseline-keyboard-double-arrow-down" />
+                <Link to="/Dashboard">
+                    <Icon className="icon_head  cursor" icon="ic:baseline-keyboard-double-arrow-down" color="white" />
+                </Link>
 
             </div>
             <div className="footer_accueil">
-                <div className="footer_accueil_contenu d-grid mx-auto">
-                    <Link className=" mx-auto" to="/Naissance"><button className="btn bg-btn-B fs-2 btn-primary">Naissance</button></Link>
-                <div className="mx-auto drapeau">
-                        <div className="vert taille"></div>
-                        <div className="jaune taille"></div>
-                        <div className="bleu taille"></div>
+                <div className="footer_accueil_contenu mx-auto">
+                    <Link  to="/Naissance" className="button fs-2 is-fullwidth is-medium text-white bg-primary is-rounded ">Naissance</Link>
+                <div className="mx-auto  d-flex drapeau">
+                        <div className="vert  taille"></div>
+                        <div className="jaune  taille"></div>
+                        <div className="bleu  taille"></div>
                 </div>
-                    <Link className=" mx-auto" to="/Deces"><button className="btn bg-btn-A fs-2 btn-primary ">Décès</button></Link>
-                    <div className="mx-auto drapeau">
-                        <div className="vert taille"></div>
-                        <div className="jaune taille"></div>
-                        <div className="bleu taille"></div>
+                    <Link  to="/Deces" className="button  is-fullwidth fs-2 bg-primary is-rounded text-white ">Décès</Link>
+                    <div className="mx-auto -glow drapeau">
+                        <div className="vert  taille"></div>
+                        <div className="jaune  taille"></div>
+                        <div className="bleu  taille"></div>
                     </div>
-                <p class="placeholder-glow">
-                    {/* pt-3 */}
-                    <Link to="/Classeur"><span class="placeholder mon_style col-12 "><p className="text">Classeur</p><Icon className="classeur" icon="emojione-v1:blue-book" /></span></Link>  
-                </p>
+                <Link to="/classeur" className="button placeholder bg-info is-rounded is-large d-flex flex-row justify-content-around is-fullwidth">
+                   <p className="text-white mt-2">Classeur</p> 
+                <Icon className="classeur" icon="emojione-v1:blue-book" />
+                </Link>
                 </div>
             </div>
         </div>

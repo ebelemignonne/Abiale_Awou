@@ -1,4 +1,5 @@
 .contenaire_naissance{
+    background-color: #311847;
     height: 100vh;
     width: 100vw;
 }
@@ -17,19 +18,18 @@
     width: 200px;
 }
 .col_mairie{
-    background-color: #6D6875;
+    background-color: #311847;
     color: white;
     width: 100%;
 
 }
 .ca_marche{
     height: 55%;
-    background-image: url('../../images/Question2.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+    width: 90%;
+    background-color: #311847;
 }
 .bg_but_naissance{
-    background-color: #6D6875;
+    background-color: #311847;
 }
 .deplacement-icon{
     transform: translateX(110px);

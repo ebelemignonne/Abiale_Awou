@@ -18,7 +18,7 @@ function Declaration (){
         <div className="contenaire_declaration d-flex flex-column">
             <div className="head_declaration d-flex justify-content-between">
                 <Link to="/Menu"><Icon icon="material-symbols:menu-rounded" color="white" width="40" height="40" /></Link>
-                <Link to="/Naissance"><Icon icon="game-icons:return-arrow" color="white" width="40" height="40" /></Link>
+                <Link to="/Naissance"><Icon icon="game-icons:return-arrow" color="white" width="40" height="40" hFlip={true} vFlip={true} /></Link>
             </div>
             <div className="inf_declararion flex-column d-flex ">
                 <Information />
@@ -98,25 +98,25 @@ function Formulairs() {
         <Form className="form_declaration_group d-flex">
       <Accordion className="Form_declaration mt-2" defaultActiveKey="">
         <Accordion.Item className="border border-5 mb-1" eventKey="0">
-          <Accordion.Header >Ville et arrondissement <Icon className="fs-4 col ms-1" icon="mdi:town-hall" color="#6d6875" width="40" height="40" /></Accordion.Header>
+          <Accordion.Header >Ville et arrondissement <Icon className="fs-4 col ms-1" icon="mdi:town-hall" color="#311847" width="40" height="40" /></Accordion.Header>
           <Accordion.Body >
           <Ville />
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item className="border border-5 mb-1" eventKey="1">
-          <Accordion.Header>Informations de L'enfant <Icon className="fs-4 col me-1" icon="ph:baby-fill" color="#6d6875" width="40" height="40" /></Accordion.Header>
+          <Accordion.Header>Informations de L'enfant <Icon className="fs-4 col me-1" icon="ph:baby-fill" color="#311847" width="40" height="40" /></Accordion.Header>
           <Accordion.Body>
           <Formulair />
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item className="border border-5" eventKey="2">
-          <Accordion.Header>Informations du pere <Icon className="fs-4 col ms-4" icon="mdi:father" color="#6d6875" width="40" height="40" /></Accordion.Header>
+          <Accordion.Header>Informations du pere <Icon className="fs-4 col ms-4" icon="mdi:father" color="#311847" width="40" height="40" /></Accordion.Header>
           <Accordion.Body>
             <Pere />
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item className="border border-5" eventKey="3">
-          <Accordion.Header>Informations de la mere <Icon className="fs-4 col ms-2" icon="mdi:mom" color="#6d6875" width="40" height="40" /></Accordion.Header>
+          <Accordion.Header>Informations de la mere <Icon className="fs-4 col ms-2" icon="mdi:mom" color="#311847" width="40" height="40" /></Accordion.Header>
           <Accordion.Body>
             <Mere />
           </Accordion.Body>
@@ -180,10 +180,6 @@ function Formulairs() {
             <option value="4">4eme</option>
             <option value="5">5eme</option>
             <option value="6">6eme</option>
-            <option value="7">7eme</option>
-            <option value="8">8eme</option>
-            <option value="9">9eme</option>
-            <option value="10">10eme</option>
         </Form.Select>
         <Button variant="primary" type="submit">
           Enregistrer
@@ -235,8 +231,8 @@ function Formulairs() {
         <Form.Label>Attestation de naissance</Form.Label>
         <Form.Control type="file" accept="image" placeholder="Apartment, studio, or floor" />
       </Form.Group>
-        <Button variant="primary" type="submit">
-          Submit
+        <Button className="button is-info" type="submit">
+          Enregistrer
         </Button>
       </Form>
     );
@@ -274,7 +270,7 @@ function Formulairs() {
         <Form.Control type="file" accept="image" placeholder="Apartment, studio, or floor" />
       </Form.Group>
         <Button variant="primary" type="submit">
-          Submit
+          Enregistrer
         </Button>
       </Form>
     );
@@ -299,15 +295,15 @@ function Formulairs() {
         <Form.Control type="text" placeholder="Nationalité" />
       </Form.Group>
       <Form.Group className="mb-3" controlId="formGridAddress2">
-        <Form.Label>Carte de séjour uniquement pour les étranger</Form.Label>
+        <Form.Label>Carte de séjour uniquement pour les étrangere</Form.Label>
         <Form.Control type="file" accept="image" placeholder="Apartment, studio, or floor" />
       </Form.Group>
       <Form.Group className="mb-3" controlId="formGridAddress2">
-        <Form.Label>Copie d'acte de la </Form.Label>
+        <Form.Label>Copie d'acte de la mere</Form.Label>
         <Form.Control type="file" accept="image" placeholder="Apartment, studio, or floor" />
       </Form.Group>
         <Button variant="primary" type="submit">
-          Submit
+          Enregistrer
         </Button>
       </Form>
     );

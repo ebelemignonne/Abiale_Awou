@@ -13,7 +13,7 @@ const Compte = () =>{
                 <div className="affich_compte">
                     <div className="">
                         {/* <button type="button" className="btn-warning">
-                        <Icon icon="mdi:user-circle" color="#6d6875" width="40" height="40" />Upload File
+                        <Icon icon="mdi:user-circle" color="#311847" width="40" height="40" />Upload File
                         <input type="file" />
                         </button> */}
                         <Upload />
