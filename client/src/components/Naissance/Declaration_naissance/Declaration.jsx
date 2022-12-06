@@ -98,34 +98,34 @@ function Formulairs() {
         <Form className="form_declaration_group d-flex">
       <Accordion className="Form_declaration mt-2" defaultActiveKey="">
         <Accordion.Item className="border border-5 mb-1" eventKey="0">
-          <Accordion.Header >Ville et arrondissement <Icon className="fs-4 col ms-1" icon="mdi:town-hall" color="#311847" width="40" height="40" /></Accordion.Header>
+          <Accordion.Header className="bg-info" >Ville et arrondissement <Icon className="fs-4 col ms-1" icon="mdi:town-hall" color="#006BA6" width="40" height="40" /></Accordion.Header>
           <Accordion.Body >
           <Ville />
           </Accordion.Body>
         </Accordion.Item>
-        <Accordion.Item className="border border-5 mb-1" eventKey="1">
-          <Accordion.Header>Informations de L'enfant <Icon className="fs-4 col me-1" icon="ph:baby-fill" color="#311847" width="40" height="40" /></Accordion.Header>
+        <Accordion.Item className="border bg-info border-5 mb-1" eventKey="1">
+          <Accordion.Header>Informations de L'enfant <Icon className="fs-4 col me-1" icon="ph:baby-fill" color="#006BA6" width="40" height="40" /></Accordion.Header>
           <Accordion.Body>
           <Formulair />
           </Accordion.Body>
         </Accordion.Item>
-        <Accordion.Item className="border border-5" eventKey="2">
-          <Accordion.Header>Informations du pere <Icon className="fs-4 col ms-4" icon="mdi:father" color="#311847" width="40" height="40" /></Accordion.Header>
+        <Accordion.Item className="border bg-info border-5" eventKey="2">
+          <Accordion.Header>Informations du pere <Icon className="fs-4 col ms-4" icon="mdi:father" color="#006BA6" width="40" height="40" /></Accordion.Header>
           <Accordion.Body>
             <Pere />
           </Accordion.Body>
         </Accordion.Item>
-        <Accordion.Item className="border border-5" eventKey="3">
-          <Accordion.Header>Informations de la mere <Icon className="fs-4 col ms-2" icon="mdi:mom" color="#311847" width="40" height="40" /></Accordion.Header>
+        <Accordion.Item className="border mt-1 bg-info border-5" eventKey="3">
+          <Accordion.Header>Informations de la mere <Icon className="fs-4 col ms-2" icon="mdi:mom" color="#006BA6" width="40" height="40" /></Accordion.Header>
           <Accordion.Body>
             <Mere />
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>
       <h2 class="badge h2_declaration text-wrap fs-5" >Verifier toutes vos informations avant d'envoyer le formulair.</h2>
-      <Button variant="primary" type="submit">
-          Envoyer <Icon icon="grommet-icons:validate" color="white" width="40" height="40" />
-        </Button>
+      <Link to="/Envoyer" className="button is-info" type="submit">
+          Envoyer <Icon className="ms-2" icon="grommet-icons:validate" color="white" width="40" height="40" />
+        </Link >
       </Form>
     );
   }

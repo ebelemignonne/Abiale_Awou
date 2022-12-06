@@ -1,52 +1,17 @@
-// import React, { useEffect, useState } from 'react';
-// import Axios from 'axios';
+import React from 'react';
 
 
-// const Politiques = () =>{
-//     const [data, setData] = useState([])
+const Politiques = () =>{
+   
+    return(
+        <div>
+            <div className='form-control bg-primary'>
+                <h2 className='form-control text-center bg-info text-white fs-1'>
+                    Politiques
+                </h2>
+            </div>
+        </div>
+    )
+}
 
-//     useEffect(() => {
-//         Axios.get('http://localhost:8000/getAll')
-//         .then(res => {
-//             console.log("Getting from ::::", res.data)
-//             setData(res.data)
-//         }).catch(error=> console.log(error))
-//     }, [])
-
-//     const arr = data.map((data, index) => {
-//         return (
-//             <tbody>
-//             <tr>
-//               <td>{data.id}</td>
-//               {/* <th scope="row">moi</th> */}
-//               <td>{data.nom}</td>
-//               <td>{data.description}</td>
-//               <td>{data.image}</td>
-//             </tr>
-//           </tbody>
-//         )
-//     })
-
-//     return(
-//         <div>
-//             <div>
-//             jesuis la Politique
-//             <table class="table">
-//         <thead>
-//             <tr>
-//             <th scope="col">id</th>
-//             <th scope="col">nom</th>
-//             <th scope="col">description</th>
-//             <th scope="col">image</th>
-//             </tr>
-//         </thead>
-//             {arr}
-//             {arr}
-//             {arr}
-//         </table>
-//             </div>
-//         </div>
-//     )
-// }
-
-// export default Politiques
+export default Politiques

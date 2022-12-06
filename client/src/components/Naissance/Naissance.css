@@ -1,10 +1,10 @@
 .contenaire_naissance{
-    background-color: #311847;
+    background-color: #006BA6;
     height: 100vh;
     width: 100vw;
 }
 .bloc_naissance{
-    height: 40%;
+    height: 100%;
     width: 90%;
 }
 .bloc2{
@@ -15,22 +15,24 @@
     flex-direction: row-reverse;
 }
 .img-mairie{
-    width: 200px;
+    width: 100%;
+    padding: 5px 0px;
+    border: 1px solid;
 }
 .col_mairie{
-    background-color: #311847;
+    background-color: #006BA6;
     color: white;
     width: 100%;
+    border-bottom: 1px solid #0496FF;
 
 }
 .ca_marche{
+    border-radius: 10px;
     height: 55%;
     width: 90%;
-    background-color: #311847;
+    background-color: #0496FF;
 }
 .bg_but_naissance{
-    background-color: #311847;
+    background-color: #006BA6;
 }
-.deplacement-icon{
-    transform: translateX(110px);
-}
+

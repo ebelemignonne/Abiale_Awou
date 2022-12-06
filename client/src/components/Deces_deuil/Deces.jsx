@@ -27,7 +27,7 @@ const Deces =()=>{
 function HeaderDeces (){
     return(
         <div className="header_deces d-flex flex-column">
-            <div className="head_deces d-flex flex-row justify-content-between ">
+            <div className="head_deces  d-flex flex-row justify-content-between ">
                 <Link to="/Menu"><Icon icon="ic:round-menu" className="ms-4 mt-3" color="white" width="40" height="40" /></Link>
                 <Link to="/Accueil"><Icon icon="game-icons:return-arrow" className="me-4 mt-3" color="white" width="40" height="40" hFlip={true} vFlip={true} /></Link>
             </div>
@@ -75,7 +75,11 @@ function ContenuDeces () {
     return(
         <div className="contenu_deces d-flex align-items-center flex-column">
             <Information />
-            <Formulairs />           
+            <Formulairs />   
+            <Link to="/Envoyer" className="button mt-5 p-3 is-info text-white text-decoration-none" variant="primary" type="submit">
+              Envoyer <Icon className="ms-2" icon="grommet-icons:validate" color="white" width="40" height="40" />
+            </Link>
+        
         </div>
     )
 }
@@ -93,9 +97,9 @@ const TextAnnime = ()=>{
                     loop: true,
                     delay: 40,
                     strings:[
-                        "la mort",
-                        "est un passage",
-                        "obigatoir a tous le monde ",
+                        "la mort est un voyage incertain,",
+                        "un sujet de pleurs",
+                        "pour les vivants.",
                     ],
                     }} />
                 </div>
@@ -129,13 +133,13 @@ function Formulairs() {
   return (
     <Accordion className="form_deces" defaultActiveKey="">
       <Accordion.Item eventKey="0">
-        <Accordion.Header className="d-flex border border-5 mb-2">Ville<Icon className="d-flex icon_ville" icon="game-icons:deadly-strike" color="#311847" width="40" height="40" hFlip={true} /></Accordion.Header>
+        <Accordion.Header className="d-flex border border-5 mb-2">Ville<Icon className="d-flex icon_ville" icon="game-icons:deadly-strike" color="#006BA6" width="40" height="40" hFlip={true} /></Accordion.Header>
         <Accordion.Body>
           <Ville1 />
         </Accordion.Body>
       </Accordion.Item>
       <Accordion.Item eventKey="1">
-        <Accordion.Header>informations du defunt<Icon className="ms-5" icon="emojione-monotone:mens-room" color="#311847" width="40" height="40" /></Accordion.Header>
+        <Accordion.Header>informations du defunt<Icon className="ms-5" icon="emojione-monotone:mens-room" color="#006BA6" width="40" height="40" /></Accordion.Header>
         <Accordion.Body>
           <Defunt />
         </Accordion.Body>

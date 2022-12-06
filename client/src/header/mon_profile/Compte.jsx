@@ -9,13 +9,10 @@ const Compte = () =>{
     return(
         <div className="contenaire_Compte">
             <div className="compte">
-                <Link className="link-compt" to="/Accueil"><Icon className="icon-compte mt-3" icon="game-icons:return-arrow" /></Link>
+
+                <Link className="link-compt" to="/Accueil"><Icon className="icon-compte mt-3" icon="game-icons:return-arrow" width="40" height="40" hFlip={true} vFlip={true} /></Link>
                 <div className="affich_compte">
                     <div className="">
-                        {/* <button type="button" className="btn-warning">
-                        <Icon icon="mdi:user-circle" color="#311847" width="40" height="40" />Upload File
-                        <input type="file" />
-                        </button> */}
                         <Upload />
                     </div>
                     <div className="mt-1">
@@ -25,6 +22,26 @@ const Compte = () =>{
                 </div>
             </div>
             <div className="param_compte mb-5 ">
+                <Link to="/ModifProfile" className="p1 text-white text-decoration-none text-center d-flex flex-colunm align-items-center justify-content-around">
+                <Icon icon="mdi:puzzle-edit" color="#006BA6" width="50" height="50" />
+                    Modifier mon profile
+                </Link>
+                <Link to="/Contribution" className="p2 text-decoration-none text-white text-center d-flex flex-colunm align-items-center justify-content-around">
+                    <Icon to="/Contribution" icon="pajamas:first-contribution" color="#006BA6" width="50" height="50" />
+                    Contribuer pour faire<br />évoluer l'application
+                </Link>
+                <Link to="/Evaluation" className="p3 text-decoration-none text-white text-center d-flex flex-colunm align-items-center justify-content-around">
+                    <Icon icon="game-icons:self-love" color="#006BA6" width="50" height="50" />
+                    Evaluez l'application
+                </Link>
+                <Link to="/Contact" className="p4 text-decoration-none text-white text-center d-flex flex-colunm align-items-center justify-content-around">
+                    <Icon className="me-5" icon="ooui:message" color="#006BA6" width="45" height="45" />
+                    Nous contacter
+                </Link>
+                <Link to="/Parametres" className="p5 text-decoration-none text-white text-center d-flex flex-colunm align-items-center justify-content-around">
+                <Icon icon="ri:user-settings-fill" color="#006BA6" width="50" height="50" />
+                    Aller aux parametres
+                </Link>
             </div>
         </div>
     )

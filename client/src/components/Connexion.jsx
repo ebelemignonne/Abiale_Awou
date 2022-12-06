@@ -35,13 +35,13 @@ const Connexion = () => {
                         <div className="column is-4-desktop ">
                             <form onSubmit={Auth} className="moi">
                                 <p className="has-text-centered">{msg}</p>
-                                <div className="field  mt-5">
+                                <div className="field  mt-2">
                                     <label className="label  text-white">Email uniquement.</label>
                                     <div className=" ">
                                         <input type="text" className="input is-rounded " placeholder="" value={email} onChange={(e) => setEmail(e.target.value)} />
                                     </div>
                                 </div>
-                                <div className="field mt-5">
+                                <div className="field mt-3">
                                     <label className="label text-white">Password</label>
                                     <div className="">
                                         <input type="password" className="input is-rounded" placeholder="******" value={password} onChange={(e) => setPassword(e.target.value)} />

@@ -19,8 +19,10 @@ function Modification (){
                 <Link to="/Menu"><Icon icon="material-symbols:menu-rounded" color="white" width="40" height="40" /></Link>
                 <Link to="/Naissance"><Icon icon="game-icons:return-arrow" color="white" width="40" height="40" hFlip={true} vFlip={true} /></Link>
             </div>
-            <div className="inf_modification flex-column d-flex ">
-                <Information />
+            <div className="inf_modification flex-row align-items-center justify-content-center d-flex ">
+              <Icon className="m-2 ms-5" icon="mdi:application-edit" color="#0496ff" width="150
+              " height="150" />
+              <Information />
             </div>
             <div className="mon_bb pt-1 ">
                 <h2 className="fs-3 col_modification ms-4  ">modification d'acte de naissance</h2>
@@ -72,34 +74,34 @@ function Formulairs() {
         <Form className="form_modification_group flex-column d-flex">
       <Accordion className="Form_modification mt-2" defaultActiveKey="">
         <Accordion.Item className="border border-5 mb-1" eventKey="0">
-          <Accordion.Header >Ville et arrondissement <Icon className="fs-4 col ms-1" icon="mdi:town-hall" color="#311847" width="40" height="40" /></Accordion.Header>
+          <Accordion.Header >Ville et arrondissement <Icon className="fs-4 col ms-1" icon="mdi:town-hall" color="#006BA6" width="40" height="40" /></Accordion.Header>
           <Accordion.Body >
           <Ville />
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item className="border border-5 mb-1" eventKey="1">
-          <Accordion.Header>Informations de L'enfant <Icon className="fs-4 col me-1" icon="ph:baby-fill" color="#311847" width="40" height="40" /></Accordion.Header>
+          <Accordion.Header>Informations de L'enfant <Icon className="fs-4 col me-1" icon="ph:baby-fill" color="#006BA6" width="40" height="40" /></Accordion.Header>
           <Accordion.Body>
           <Formulair />
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item className="border border-5" eventKey="2">
-          <Accordion.Header>Informations du pere <Icon className="fs-4 col ms-4" icon="mdi:father" color="#311847" width="40" height="40" /></Accordion.Header>
+          <Accordion.Header>Informations du pere <Icon className="fs-4 col ms-4" icon="mdi:father" color="#006BA6" width="40" height="40" /></Accordion.Header>
           <Accordion.Body>
             <Pere />
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item className="border border-5" eventKey="3">
-          <Accordion.Header>Informations de la mere <Icon className="fs-4 col ms-2" icon="mdi:mom" color="#311847" width="40" height="40" /></Accordion.Header>
+          <Accordion.Header>Informations de la mere <Icon className="fs-4 col ms-2" icon="mdi:mom" color="#006BA6" width="40" height="40" /></Accordion.Header>
           <Accordion.Body>
             <Mere />
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>
       <h2 class="badge h2_modification text-wrap fs-3" >Verifier toutes vos informations avant d'envoyer le formulair.</h2>
-      <Button variant="primary" type="submit">
-          Envoyer <Icon icon="grommet-icons:validate" color="white" width="40" height="40" />
-        </Button>
+      <Link to="/Envoyer" className="button p-3 is-info text-white text-decoration-none" variant="primary" type="submit">
+          Envoyer <Icon className="ms-2" icon="grommet-icons:validate" color="white" width="40" height="40" />
+        </Link>
       </Form>
     );
   }
@@ -210,7 +212,7 @@ function Formulairs() {
         <Form.Control type="file" accept="image" placeholder="Apartment, studio, or floor" />
       </Form.Group>
         <Button variant="primary" type="submit">
-          Submit
+          Enregister
         </Button>
       </Form>
     );
@@ -248,7 +250,7 @@ function Formulairs() {
         <Form.Control type="file" accept="image" placeholder="Apartment, studio, or floor" />
       </Form.Group>
         <Button variant="primary" type="submit">
-          Submit
+          Enregistrer
         </Button>
       </Form>
     );
@@ -281,7 +283,7 @@ function Formulairs() {
         <Form.Control type="file" accept="image" placeholder="Apartment, studio, or floor" />
       </Form.Group>
         <Button variant="primary" type="submit">
-          Submit
+          Enregistrer
         </Button>
       </Form>
     );

@@ -5,7 +5,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    background-color: #311847;
+    background-color: #006BA6;
 }
 .cursor{
     cursor: pointer;
@@ -29,7 +29,6 @@ head{
 }
 .icon_head{
     font-size: 40px;
-    color: #311847;
 }
 
 .drapeau{
@@ -53,7 +52,7 @@ head{
 .footer_accueil{
     height: 50%;
     width: 100%;
-    background-color: #0091AD;
+    background-color: #0496FF;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -75,6 +74,23 @@ head{
     text-align: center;
 }
 .classeur{
-    font-size: 60px;
+    font-size: 50px;
     text-align: center;
+    transform: translateX(-7px);
 }
+.classeurP{
+    transform: translateX(-30px);
+}
+.point_accueil{
+    transform: translateX(-20px);
+}
+.point_accueil1{
+    transform: translateX(-45px);
+}
+
+
+
+
+
+
+

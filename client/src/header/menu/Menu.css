@@ -4,13 +4,13 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: #0091AD;
+    background-color: #0496FF;
 }
 
 .proprietes{
     height: 100%;
     width: 70%;
-    background-color: #311847;
+    background-color: #006BA6;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,7 +28,7 @@
 }
 
 .icon-menu{
-    color: #311847;
+    color: #006BA6;
     font-size: 40px;
     margin-right: 15px;
     margin-top: 30px;
@@ -43,5 +43,5 @@
 
 .dropdown-menu{
     background-color: #E0ECF5;
-    border: 2px solid #311847;
+    border: 2px solid #006BA6;
 }

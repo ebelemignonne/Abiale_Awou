@@ -1,0 +1,48 @@
+.contenaire_reclamation{
+    height: 100vh;
+    width: 100vw;
+    background-color: #006BA6;
+}
+.block_head{
+    height: 35%;
+    width: 100%;
+}
+
+.head_legalisation{
+    height: 35%;
+    width: 90%;
+}
+.header_legalisation{
+    height: 70%;
+    width: 100%;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+}
+
+.foot-reclamation{
+    height: 65%;
+    width: 100%;
+}
+
+.form_legalisation{
+    height: 90%;
+    width: 90%;
+}
+
+.input_legal{
+    width: 100%;
+}
+.input_legal_select{
+    width: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+

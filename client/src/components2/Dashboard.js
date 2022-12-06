@@ -1,8 +1,11 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from 'react'
+import "./Dashboard.css"
 import axios from 'axios';
 import jwt_decode from "jwt-decode";
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { Icon } from '@iconify/react';
  
 const Dashboard = () => {
     const [name, setName] = useState('');
@@ -57,27 +60,43 @@ const Dashboard = () => {
     }
 
     return (
-        <div className="container mt-5">
-            <h1>Welcome Back: {name}</h1>
-            <table className="table is-striped is-fullwidth">
-                <thead>
-                    <tr>
-                        <th>No</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {users.map((user, index) => (
-                        <tr key={user.id}>
-                            <td>{index + 1}</td>
-                            <td>{user.name}</td>
-                            <td>{user.email}</td>
+        <div className="container_dash placeholder-glow d-flex flex-column align-items-center justify-content-around">
+            <div className="head_dash  d-flex align-items-center justify-content-between">
+                <Link to="/Menu"><Icon icon="material-symbols:menu-rounded" color="white" width="40" height="40" /></Link>
+                <Link to="/Naissance"><Icon icon="game-icons:return-arrow" color="white" width="40" height="40" hFlip={true} vFlip={true} /></Link>
+            </div>
+            <div className='header_daash   d-flex align-items-center flex-row justify-content-between text-info'>
+                <div className='ms-1'>
+                    <h1>TABLEAU DE BORD</h1>
+                    <p className='bg-primary text-center'>Nom de l'Agent connecté:</p>
+                    <p className='form-control bg-primary text-center text-info border-info'>{name}</p>
+
+                </div>
+            <Icon className='' icon="ant-design:dashboard-outlined" color="#00b4ff" width="100" height="100" />
+            </div>
+
+            <div className='corps_dash'>
+                <p className='text-info text-center fs-4'>Lite des angents enregistré</p>
+                <table className="table is-striped is-fullwidth">
+                    <thead className='bg-primary'>
+                        <tr >
+                            <th className='text-white'>No</th>
+                            <th className='text-white'>Nom</th>
+                            <th className='text-white'>Email</th>
                         </tr>
-                    ))}
- 
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        {users.map((user, index) => (
+                            <tr key={user.id}>
+                                <td className='bg-success text-white'>{index + 1}</td>
+                                <td className='bg-success text-white opacity-75'>{user.name}</td>
+                                <td className='bg-success text-white opacity-75'>{user.email}</td>
+                            </tr>
+                        ))}
+    
+                    </tbody>
+                </table>
+            </div>
         </div>
     )
 }

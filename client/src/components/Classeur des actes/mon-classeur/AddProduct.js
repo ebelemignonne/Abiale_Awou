@@ -3,6 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { Icon } from "@iconify/react";
+import "./AddProduct.css"
 
 const AddProduct = () => {
   const [title, setTitle] = useState("");
@@ -34,9 +35,9 @@ const AddProduct = () => {
   };
 
   return (
-    <div className="columns form-control d-flex is-centered mt-5">
+    <div className="contenaire_add mx-auto d-flex">
       <div className="column is-half">
-        <form onSubmit={saveProduct}>
+        <form className="mx-auto" onSubmit={saveProduct}>
           <div className="field">
             <label className="label fs-4 text-center">Nom du proprietair de l'acte de naissance</label>
             <div className="control">
@@ -81,7 +82,7 @@ const AddProduct = () => {
               <button type="submit" className="button is-success">
                 Enregistrer
               </button>
-              <Link to="/classeur" className="button is-info is-outlined">Retour<Icon className="ms-1" icon="game-icons:return-arrow" color="#311847" width="35" height="35" vFlip={true} /></Link>
+              <Link to="/classeur" className="button is-info is-outlined">Retour<Icon className="ms-1" icon="game-icons:return-arrow"  width="35" height="35" vFlip={true} /></Link>
             </div>
           </div>
         </form>

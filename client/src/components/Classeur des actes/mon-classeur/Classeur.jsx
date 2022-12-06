@@ -115,7 +115,7 @@ const Classeur =()=>{
                 </div>
                 <div className="text_classeur">
                     <h2 className="fs-2 text-white ms-4">Mon classeur de <br /> document</h2>
-                    <Icon className="fs-classeur text-white me-4" icon="wpf:books" />
+                    <Icon className="me-4" icon="arcticons:mastercomworkbook" color="white" width="100" height="100" />
                 </div>
 
             </div>

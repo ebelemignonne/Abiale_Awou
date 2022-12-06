@@ -1,6 +1,6 @@
 import React from "react";
 import "./Accept.css"
-import maman1 from "../images/maman1.png"
+import maman1 from "../images/maman1.jpg"
 import { Link } from "react-router-dom";
 
 
